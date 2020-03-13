@@ -5,7 +5,7 @@
 
 ![avatar](./pic/temp/temporal.jpg)
 
-![avatar](https://raw.githubusercontent.com/fanyuguang/technical-notes/master/pic/1/temporal.jpg)
+![avatar](https://raw.githubusercontent.com/fanyuguang/technical-notes/master/pic/temp/temporal.jpg)
 
 ```flow
 st=>start: 开始
