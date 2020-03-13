@@ -1,0 +1,90 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[space]{ctex}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{float} 
+\usepackage{subfigure}
+\usepackage{listings}
+\title{LaTeX快速入门}
+\author{Yuguang Fan}
+\date{\today}
+\begin{document}
+\maketitle
+
+\part{part标题}
+\section{section标题}
+\subsection{subsection标题}
+\subsubsection{subsubsection标题}
+\paragraph{paragraph标题}
+\subparagraph{subparagraph标题}
+
+你好！LaTeX
+\includegraphics{./pic/temp/temporal.jpg}
+
+\begin{lstlisting}[language={Python}]
+#Layer3 - Convolution
+with tf.variable_scope('layer3-conv2'):
+        conv2_weights = tf.get_variable('weight',[5,5,6,16],initializer
+            =tf.truncated_normal_initializer(stddev=0.1))
+        conv2_biases = tf.get_variable('bias',[16],initializer
+            =tf.constant_initializer(0.0))
+        conv2 = tf.nn.conv2d(pool1,conv2_weights,
+            strides=[1,1,1,1],padding='VALID')
+        relu2 = tf.nn.relu(tf.nn.bias_add(conv2,conv2_biases))
+\end{lstlisting}
+
+$a+b=c$
+
+$$
+\overbrace{0,0,\dots,0}^{\text{共n项}}
+$$
+
+$$
+{f(x)=a_nx^n+a_{n-1}x^{n-1}+a_{n-2}x^{n-2}}+\cdots
+$$
+
+\begin{gather}
+    x^2+y^2=z^2 \label{eq:r2} \\
+    x^3+y^3=z^3 \notag \\
+    x^4+y^4=z^4 \tag{$*$} \\
+    x^5+y^5=z^5 \tag*{$*$} \\
+    x^6+y^6=z^6 \tag{???$'$}
+\end{gather}
+
+$$
+A=
+\left\{
+ \begin{matrix}
+   a & b & \cdots & e\\
+   f & g & \cdots & j \\
+   \vdots & \vdots & \ddots & \vdots \\
+   p & q & \cdots & t
+  \end{matrix} 
+\right\}
+$$
+
+$$
+\begin{array}{c}
+F_{n+2}=F_{n+1}+F_{n} \\ 
+F_{n+1}=F_{n+1}
+\end{array}
+$$
+
+$$
+\left[
+\begin{array}{cc|c}
+1 & 2 & 3 \\
+4 & 5 & 6
+\end{array}
+\right] 
+$$
+
+\begin{thebibliography}{99}
+\bibitem{1} 参考文献1
+\bibitem{2} 参考文献2
+\end{thebibliography}
+\begin{appendix}
+\section{附录1}
+\section{附录2}
+\end{appendix}
+\end{document}

@@ -1,0 +1,214 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[space]{ctex}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{float} 
+\usepackage{subfigure}
+\usepackage{listings}
+\lstset{
+    breaklines,
+    % numbers=left, 
+    % numberstyle=\tiny,
+    frame=single,
+    basicstyle=\ttfamily,
+    language=c++,
+}
+
+\title{C++}
+\author{Yuguang Fan}
+\date{\today}
+\begin{document}
+\maketitle
+
+\section{基本数据类型}
+
+aaa
+
+\section{表达式}
+
+aaa
+
+\section{语句}
+
+aaa
+
+\section{函数}
+
+aaa
+
+\section{类}
+
+aaa
+
+\section{容器}
+
+aaa
+
+\section{IO操作}
+
+\subsection{文件操作}
+
+\begin{lstlisting}[language={C++}]
+#include <fstream>
+\end{lstlisting}
+
+打开或创建文本
+
+\begin{lstlisting}[language={C++}]
+string file_path = "../data/filename.txt";
+fstream text_file;
+text_file.open(file_path, ios::out); //打开文件并清空内容
+text_file.open(file_path, ios::out | ios::app);//打开文件，并保留文件原有内容，定位到文件末尾
+\end{lstlisting}
+
+\begin{itemize}
+    \item ios::in读
+    \item ios::out写
+    \item ios::app每次写操作前，定位到文件末尾
+    \item ios::ate打开文件时，定位到文件末尾
+    \item ios::trunc清空内容
+\end{itemize}
+
+打开或创建带序号文本
+
+\begin{lstlisting}[language={C++}]
+int i = 1;
+char file_path[50];
+sprintf(file_path, "../data/file%d.txt", i);
+fstream text_file;
+text_file.open(file_path, ios::out);
+\end{lstlisting}
+
+遍历读取文本信息
+
+方法一
+
+按词读取
+
+\begin{lstlisting}[language={C++}]
+string str;
+while (text_file >> str)
+{
+    cout << str << endl;
+}
+\end{lstlisting}
+
+按行读取
+
+\begin{lstlisting}[language={C++}]
+string str;
+while(getline(text_file, str))
+{
+    cout << str << endl;
+}
+\end{lstlisting}
+
+方法二
+
+按词读取
+
+\begin{lstlisting}[language={C++}]
+string str;
+while (!text_file.eof())
+{
+    text_file >> str;
+}
+\end{lstlisting}
+
+按行读取
+
+\begin{lstlisting}[language={C++}]
+string str;
+while (!text_file.eof())
+{
+    getline(text_file, str);
+    cout << str;
+}
+\end{lstlisting}
+
+向文本写入信息
+
+\begin{lstlisting}[language={C++}]
+string str1 = “hello”;
+string str2 = “world”;
+text_file << str1 << “ ”<< str2 << endl;
+\end{lstlisting}
+
+关闭文本
+
+\begin{lstlisting}[language={C++}]
+text_file.close();
+\end{lstlisting}
+
+\section{异常处理}
+
+aaa
+
+\section{日志}
+
+aaa
+
+\section{内存管理}
+
+aaa
+
+\section{并发}
+
+aaa
+
+\section{泛型}
+
+aaa
+
+\section{重载}
+
+aaa
+
+\section{模板}
+
+aaa
+
+\section{编程规范}
+
+子程序一般情况下代码长度不宜超过200行
+
+\subsection{命名规则}
+
+\begin{itemize}
+    \item 文件：全部小写，中间以下划线连接file_name.cpp
+    \item 函数：每个单词首字母大写FunctionName ()
+    \item 类：首字母大写ClassName
+    \item 枚举类型：首字母大写EnumeratorTypes
+    \item 局部变量：全部小写，以下划线连接local_variable_name
+    \item 类的成员变量：全部小写，以下划线连接，以下划线结尾 class_variable_name_
+    \item 结构体的成员变量：全部小写，以下划线连接struct_variable_name
+    \item 全局变量：g_做前缀，全部小写，以下划线连接g_global_variable_name
+    \item 常量：k做前缀，首字母大写kConstantName
+    \item 宏：全部大写，以下划线连接MACRO_TYPE
+    \item 名字空间：全部小写，以下划线连接namespace_names
+\end{itemize}
+
+\subsection{#include头文件引用顺序}
+
+\begin{enumerate}
+    \item 自身.cpp文件的.h文件
+    \item 系统.h文件
+    \item 本项目内其他自定义的.h文件
+\end{enumerate}
+
+\section{随记}
+
+\subsection{打印时间}
+
+\begin{lstlisting}[language={C++}]
+auto now = std::chrono::system_clock::now();
+std::time_t t = std::chrono::system_clock::to_time_t(now);
+std::cout << std::put_time(std::localtime(&t), "%Y-%m-%d %H:%M:%S") << " ";
+\end{lstlisting}
+
+\begin{thebibliography}{99}
+\bibitem{1} 参考文献1
+\bibitem{2} 参考文献2
+\end{thebibliography}
+\end{document}

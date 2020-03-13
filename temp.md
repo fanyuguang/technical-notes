@@ -3,7 +3,7 @@
 | 单元格 | 单元格 | 单元格 |
 | 单元格 | 单元格 | 单元格 |
 
-![avatar](./pic/1/temporal.jpg)
+![avatar](./pic/temp/temporal.jpg)
 
 ![avatar](https://raw.githubusercontent.com/fanyuguang/technical-notes/master/pic/1/temporal.jpg)
 
