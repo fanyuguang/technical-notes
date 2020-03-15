@@ -6,13 +6,28 @@
 \usepackage{float} 
 \usepackage{subfigure}
 \usepackage{listings}
+\usepackage{color}
+\usepackage{xcolor}
 \lstset{
-    breaklines,
-    % numbers=left, 
-    % numberstyle=\tiny,
-    frame=single,
-    basicstyle=\ttfamily,
     language=c++,
+    frame=single,
+    basicstyle=\footnotesize, %ttfamily, footnotesize
+    breaklines=true,
+    % numbers=left, 
+    % numberstyle=\footnotesize, % tiny, footnotesize
+    stepnumber=1,
+    numbersep=5pt,
+    backgroundcolor=\color{white},
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2,
+    captionpos=b,
+    breakatwhitespace=false,
+    escapeinside={\%*}{*)},
+    xleftmargin=2em,
+    xrightmargin=2em,
+    aboveskip=1em
 }
 
 \title{C++}
@@ -24,6 +39,8 @@
 \section{基本数据类型}
 
 aaa
+bbb
+ccc
 
 \section{表达式}
 
@@ -176,20 +193,20 @@ aaa
 \subsection{命名规则}
 
 \begin{itemize}
-    \item 文件：全部小写，中间以下划线连接file_name.cpp
-    \item 函数：每个单词首字母大写FunctionName ()
+    \item 文件：全部小写，中间以下划线连接file\_name.cpp
+    \item 函数：每个单词首字母大写FunctionName()
     \item 类：首字母大写ClassName
     \item 枚举类型：首字母大写EnumeratorTypes
-    \item 局部变量：全部小写，以下划线连接local_variable_name
-    \item 类的成员变量：全部小写，以下划线连接，以下划线结尾 class_variable_name_
-    \item 结构体的成员变量：全部小写，以下划线连接struct_variable_name
-    \item 全局变量：g_做前缀，全部小写，以下划线连接g_global_variable_name
+    \item 局部变量：全部小写，以下划线连接local\_variable\_name
+    \item 类的成员变量：全部小写，以下划线连接，以下划线结尾 class\_variable\_name\_
+    \item 结构体的成员变量：全部小写，以下划线连接struct\_variable\_name
+    \item 全局变量：g\_做前缀，全部小写，以下划线连接g\_global\_variable\_name
     \item 常量：k做前缀，首字母大写kConstantName
-    \item 宏：全部大写，以下划线连接MACRO_TYPE
-    \item 名字空间：全部小写，以下划线连接namespace_names
+    \item 宏：全部大写，以下划线连接MACRO\_TYPE
+    \item 名字空间：全部小写，以下划线连接namespace\_names
 \end{itemize}
 
-\subsection{#include头文件引用顺序}
+\subsection{\#include头文件引用顺序}
 
 \begin{enumerate}
     \item 自身.cpp文件的.h文件

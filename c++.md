@@ -139,7 +139,7 @@ aaa
 - 类：首字母大写ClassName
 - 枚举类型：首字母大写EnumeratorTypes
 - 局部变量：全部小写，以下划线连接local_variable_name
-- 类的成员变量：全部小写，以下划线连接，以下划线结尾 class_variable_name_
+- 类的成员变量：全部小写，以下划线连接，以下划线结尾class_variable_name_
 - 结构体的成员变量：全部小写，以下划线连接struct_variable_name
 - 全局变量：g_做前缀，全部小写，以下划线连接g_global_variable_name
 - 常量：k做前缀，首字母大写kConstantName
